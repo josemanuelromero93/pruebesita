@@ -34,6 +34,7 @@ public class NotesListActivity extends AppCompatActivity {
             Intent i= new Intent(NotesListActivity.this, NoteDetailActivity.class);
             startActivity(i);
             return true;
+            
         }
         return super.onOptionsItemSelected(item);
     }
