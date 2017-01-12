@@ -5,7 +5,6 @@
     tools:context="layout.NoteDetailFragment"
     android:background="#F2F2F2">
 
-
     <EditText
         android:id="@+id/fragment_note_detail_title"
         android:hint="Enter note title"
@@ -28,7 +27,8 @@
         android:gravity="top|left"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="8dp"
         android:layout_below="@+id/fragment_note_detail_title"/>
 
 </RelativeLayout>
+
