@@ -28,5 +28,6 @@ public class NoteRowViewHolder extends RecyclerView.ViewHolder{
         this.note = note;
         noteTitleText.setText(note.getText());
         noteTextText.setText(note.getText());
+
     }
 }
