@@ -44,7 +44,6 @@ public class NoteDetailFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
 
-
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         SharedPreferences.Editor editor = preferences.edit();
@@ -74,14 +73,15 @@ public class NoteDetailFragment extends Fragment {
         // abro el fichero
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         SharedPreferences.Editor editor = preferences.edit();
+
         // leo lo escrito en pantalla
         String title = titleText.getText().toString();
         String description = descriptionText.getText().toString();
-
 
         // grabo eso en el fichero
         editor.putString("NOTE_TITLE", title);
         editor.putString("NOTE_DESCRIPTION", description);
         editor.apply();
     }
+
 }

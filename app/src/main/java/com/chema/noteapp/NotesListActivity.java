@@ -6,12 +6,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.chema.noteapp.model.Note;
+import com.chema.noteapp.model.Notes;
+
 public class NotesListActivity extends AppCompatActivity {
+
+    Notes listOfNotes = new Notes();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_list);
+
+        NoteListFragment noteListFragment = (NoteListFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_activity_notes_list);
+
+        for (int i = 0; i < 20; i = i + 2) {
+
+            Note note = new Note("Note " + i);
+            note.setText("Noticia súper hiper mega importante " + i);
+            listOfNotes.add(note);
+        }
+            NoteAdapter adapter = new NoteAdapter(listOfNotes ,this);
+        noteListFragment.setAdapter(adapter);
+
     }
 
     @Override
